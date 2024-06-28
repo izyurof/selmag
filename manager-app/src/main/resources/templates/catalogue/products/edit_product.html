@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование товара &laquo;[[${product.title}]]&raquo; - Сульмаг</title>
+</head>
+<body>
+<h1>Редактирование товара &laquo;[[${product.title}]]&raquo;</h1>
+<div th:if="${errors}">
+    <h2>Допущены ошибки</h2>
+    <ul>
+        <li th:each="error : ${errors}" th:text="${error}"></li>
+    </ul>
+</div>
+<a th:href="@{/catalogue/products/{productId}(productId=${product.id})}">Вернуться к товару</a>
+<form th:method="PATCH" th:action="@{/catalogue/products/{productId}/edit(productId=${product.id})}">
+    <label>
+        Название: <br>
+        <input type="text" name="title" th:value="${payload != null ? payload.title : product.title}">
+    </label><br>
+    <label>
+        Описание:<br>
+        <input type="text" name="description" th:value="${payload != null ? payload.description : product.description}">
+    </label><br>
+    <input type="submit" value="Редактировать">
+</form>
+</body>
+</html>
+
+<!--payload != null ? payload.title : -->
+<!--payload != null ? payload.description : -->

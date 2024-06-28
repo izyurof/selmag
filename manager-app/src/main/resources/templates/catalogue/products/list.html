@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список товаров - Сельмаг</title>
+</head>
+<body>
+<h1>Список товаров</h1>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Товар</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.id}"></td>
+        <td>
+            <a th:href="@{/catalogue/products/{productId}(productId=${product.id})}"
+               th:text="${product.title}"></a>
+            <a th:href="@{/catalogue/products/{productId}/edit(productId=${product.id})}">Изменить товар</a>
+            <a th:href="@{/catalogue/products/{productId}/delete(productId=${product.id})}">Удалить товар</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/catalogue/products/create}">Создать товар</a>
+</body>
+</html>

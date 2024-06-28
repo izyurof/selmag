@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удаление товара &laquo;[[${product.title}]]&raquo; - Сельмаг</title>
+</head>
+<body>
+<h1>Вы действительно хотите удалить товар &laquo;[[${product.title}]]&raquo;?</h1>
+<form th:method="DELETE" th:action="@{/catalogue/products/{productId}/delete(productId=${product.id})}">
+    <label>
+        Название: <br>
+        <input type="text" name="value" th:value="${product.title}">
+    </label> <br>
+    <label>
+        Описание: <br>
+        <input type="text" name="description" th:value="${product.description}">
+    </label> <br>
+    <input type="submit" value="Да">
+</form>
+</body>
+</html>
