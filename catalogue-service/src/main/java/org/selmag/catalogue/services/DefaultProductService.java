@@ -1,8 +1,8 @@
-package org.selmag.manager.services;
+package org.selmag.catalogue.services;
 
-import org.selmag.manager.entity.Product;
+import org.selmag.catalogue.entity.Product;
 import lombok.RequiredArgsConstructor;
-import org.selmag.manager.repositories.ProductRepository;
+import org.selmag.catalogue.repositories.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

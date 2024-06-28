@@ -1,6 +1,6 @@
-package org.selmag.manager.repositories;
+package org.selmag.catalogue.repositories;
 
-import org.selmag.manager.entity.Product ;
+import org.selmag.catalogue.entity.Product ;
 
 import java.util.List;
 import java.util.Optional;

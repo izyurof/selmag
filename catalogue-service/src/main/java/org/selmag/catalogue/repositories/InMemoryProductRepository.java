@@ -1,8 +1,8 @@
-package org.selmag.manager.repositories;
+package org.selmag.catalogue.repositories;
 
 import org.springframework.stereotype.Repository;
 
-import org.selmag.manager.entity.Product;
+import org.selmag.catalogue.entity.Product;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
